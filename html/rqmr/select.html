@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="eng">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Final Project Website</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    
+    <!-- calendar imports -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+    <link rel="stylesheet" href="../../css/final.css" />
+    
+    <script type = "text/javascript">
+         <!--
+            function WriteCookie() {
+               if( document.myform.customer.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue = escape(document.myform.customer.value) + ";";
+               document.cookie = "name=" + cookievalue;
+               document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+         //-->
+      </script>      
+    
+    </head>
+    
+    
+
+<body>
+    
+       <!-- navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg justify-content-between">
+        <a class="navbar-brand" href="#">RQMR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="rqmr.html">BOOK <span class="sr-only">(current)</span></a>
+                </li>
+      
+                
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">SIGN IN<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Flights Available:</h1>
+    
+    <div class="container1">
+       
+      <div class="row">
+        <div class="col-sm">
+          flight_id: '00000001'
+        </div>
+        <div class="col-sm">
+          from_city: 'NYC'
+        </div>
+        <div class="col-sm">
+          toCity: 'MIA'
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+           depart: 2019-03-19
+        </div>
+        <div class="col-sm">
+           arrive: 2019-03-19
+        </div>
+        <div class="col-sm">
+          flight_id: '00000004'
+        </div>
+      </div>
+     
+    </div>
+    <button id="submit" class="btn btn-lg" >Submit</button>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+   
+    <script>
+    
+	
+	
+    var queryString = window.location.href;    
+    console.log(queryString);
+    var params = {}, queries,queries2 = [], temp, i, l;
+    // Split into key/value pairs
+    queries = queryString.split("?");
+    console.log(queries);
+    for ( i = 1, l = queries.length-1; i < l; i++ ) {
+        queries2[i-1]= queries[i];
+        
+    };
+         console.log(queries2);
+    // Convert the array of strings into an object
+    for ( i = 0, l = (queries2.length); i < l; i++ ) {
+        temp = queries2[i].split('=');
+        params[temp[0]] = temp[1];
+        console.log(temp);
+        
+    };
+    
+    
+    return params;
+    
+
+        
+
+</script>
+    <script >
+   
+    $('#submit').on('click',function() {
+        
+       
+        window.location.href = "seating.html";
+  
+});
+    
+</script>
+
+    
+    
+    
+    
+    </body>
+
+</html>

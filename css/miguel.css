@@ -1,0 +1,104 @@
+.justify-content-end a.nav-link i {color: blue;}
+
+.justify-content-edn a:hover.nav-link i {color: gray;}
+
+.row {margin: 60px 0}
+
+.jumbotron {background-color: blue;}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.justify-content-end a.nav-link i {color: blue;}
+
+.justify-content-edn a:hover.nav-link i {color: gray;}
+
+
+
+.carousel-inner{
+    background-color: black;
+}
+.navbar-brand {
+    max-height: 7%;
+    max-width: 7%; 
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.carousel-inner {
+    margin-top:50px;
+}
+
+.bg-custom {
+    background-color: black;
+}
+.carousel-caption {
+    right: 5%;
+    text-align: right;
+    background-color: black;
+    max-width: 300px;
+    left: auto;
+    padding:5px;
+}
+.nav-item {
+    font-family: "Helvetica", serif;
+}
+
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.jumbotron{
+   
+    margin-top:60px;
+    background-image: url("../img/naples.jpg");
+    background-size: cover;
+    min-height: 1700px;
+    
+ 
+}
+.jumbotron .heading{
+    font-size: 70pt;   
+    margin-top: 20pt;
+    color: white;
+    
+}
+
+.jumbotron .sub{
+    font-size: 30pt;   
+    color: white;
+    
+}
+@media (max-width: 1000px) {
+  .jumbotron {
+    height: 250px;
+  }
+  .jumbotron .container h1 {
+    font-size: 25px;
+  }
+  .jumbotron .container p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 570px) {
+  .carousel-inner {
+    margin-top:180px;
+}
+    .jumbotron {
+    margin-top:180px;
+  }
+}
+}

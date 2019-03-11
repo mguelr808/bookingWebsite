@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="eng">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Final Project Website</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    
+    <!-- calendar imports -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+    <link rel="stylesheet" href="../../css/final.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+     
+    
+    </head>
+    
+    
+
+<body>
+    var msg = "";
+       <!-- navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg justify-content-between">
+        <a class="navbar-brand" href="#">RQMR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">BOOK <span class="sr-only">(current)</span></a>
+                </li>
+      
+             
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">SIGN IN<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+    <div class="form1">
+        <form class = "inputs"> 
+            <h1>Book a flight today!</h1>
+            <div class="form-row">
+                <div class="form-group col-md-2 col-form-label-lg">
+                    <label for="fromCity">from</label>
+                    <select id="fromCity" class="form-control form-control-lg">
+                        <option selected>Choose...</option>
+                        <option>NYC</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2 col-form-label-lg">
+                    <label for="toCity">to</label>
+                    <select id="toCity" class="form-control form-control-lg">
+                        <option selected>Choose...</option>
+                        <option>MIA</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <form method="post">
+                    <div class="form-group ">
+                        <label class="control-label " for="date">
+                        Date
+                        </label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                       </div>
+                       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                      </div>
+                    </div>
+                     
+                    </form>
+                </div>
+                <div class="form-group col-md-2">
+                    <form method="post">
+                    <div class="form-group ">
+                        <label class="control-label " for="date2">
+                        Date
+                        </label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                       </div>
+                       <input class="form-control" id="date2" name="date2" placeholder="MM/DD/YYYY" type="text"/>
+                      </div>
+                    </div>
+                     
+                    </form>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="tripType">Trip Type</label>
+                    <select id="tripType" class="form-control">
+                        <option selected>Round_Trip</option>
+                        <option>One_Way</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Adults">Adults</label>
+                    <select id="Adults" class="form-control">
+                        <option selected>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="children">Children</label>
+                    <select id="children" class="form-control">
+                        <option selected>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="class">Class</label>
+                    <select id="class" class="form-control">
+                        <option selected>Tourist</option>
+                        <option>Family</option>
+                        <option>Buisiness</option>
+                        
+                    </select>
+                </div>
+              
+
+            </div>
+                
+            <div class="form-group">
+                <div class="col-sm-10">
+                    
+                    <button id="submit" class="btn btn-default" >Submit</button>
+                
+                </div>
+            </div>
+            
+            
+        </form>
+        
+    </div>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+        orientation: 'top',
+      };
+      date_input.datepicker(options);
+    })
+</script>
+    <script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date2"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+        orientation: 'top',
+      };
+      date_input.datepicker(options);
+    })
+</script>
+
+<script >
+   var msg = "";
+    $('#submit').on('click',function() {
+        msg+= "?"
+        msg+= "toCity" + "="+ $('#toCity').val() + "?";
+        msg+= "fromCity" + "="+ $('#fromCity').val()+ "?";
+        msg+= "children" + "="+ $('#children').val()+ "?";
+        msg+= "depart" + "="+ $('#date').val()+ "?";
+        msg+= "arrive" + "="+ $('#date2').val()+ "?";
+        msg+= "class" + "="+ $('#class').val()+ "?";
+        msg+= "tripType" + "="+ $('#tripType').val()+ "?";
+       
+        window.location.href = "select.html" + msg;
+
+  
+});
+    
+</script>
+    
+    
+    
+    
+    </body>
+
+</html>
