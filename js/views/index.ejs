@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pivotal Search</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- styles -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    
+    <!-- calendar imports -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+    
+    
+    
+   
+  </head>
+  <body>
+    <form method="get" action="/submit" name="yourForm" enctype="multipart/form-data" id="theForm" novalidate> 
+            <h1>Book a flight today!</h1>
+            <div class="form-row">
+                <div class="form-group col-md-2 col-form-label-lg">
+                    <label for="fromCity">from</label>
+                    <select id="fromCity" class="form-control form-control-lg" name = "fromCity"  type="text">
+                        <option selected>Choose...</option>
+                        <option>NYC</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2 col-form-label-lg">
+                    <label for="toCity">to</label>
+                    <select id="toCity" class="form-control form-control-lg" name = "toCity"  type="text">
+                        <option selected>Choose...</option>
+                        <option>MIA</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    
+                    <div class="form-group ">
+                        <label class="control-label " for="date">
+                        Date
+                        </label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                       </div>
+                       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" name = "date"/>
+                      </div>
+                    </div>
+                     
+                </div>
+                <div class="form-group col-md-2">
+                    <div class="form-group ">
+                        <label class="control-label " for="date2">
+                        Date
+                        </label>
+                      <div class="input-group">
+                       <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                       </div>
+                       <input class="form-control" id="date2" name="date2" placeholder="MM/DD/YYYY" type="text" name = "date2"/>
+                      </div>
+                    </div>
+                     
+
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="tripType">Trip Type</label>
+                    <select id="tripType" class="form-control" name = "tripType"  type="text">
+                        <option selected>Round_Trip</option>
+                        <option>One_Way</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="adults">Adults</label>
+                    <select id="adults" class="form-control" name = "adults"  type="text">
+                        <option selected>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="children">Children</label>
+                    <select id="children" class="form-control" name = "children"  type="text">
+                        <option selected>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="class">Class</label>
+                    <select id="class" class="form-control" name = "class"  type="text">
+                        <option selected>Tourist</option>
+                        <option>Family</option>
+                        <option>Buisiness</option>
+                        
+                    </select>
+                </div>
+              
+
+            </div>
+                
+            <div class="form-group">
+                <div class="col-sm-10">
+                    
+                     
+                     
+                     <button type="submit" class="btn btn-primary"  >Search</button>
+                </div>
+            </div>
+            
+            
+</form>
+     
+       
+  </body>
+</html>

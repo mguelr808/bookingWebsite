@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- styles -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    
+    <!-- calendar imports -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+  </head>
+  <body>
+   <table border="1" cellpadding="7" cellspacing="7">
+  <tr>
+    <th width="50px">No</th>
+    <th>Flight No</th>
+    <th>FROM</th>
+    <th>TO</th>
+    <th>DEPART</th>
+    <th>ARRIVE</th>
+    <th></th>  
+  </tr>
+  <% if(data.length){ 
+    for(var i = 0;i < data.length;i++) { %>
+  <tr>
+    <td><%=(i+1)%></td>
+    <td><%=data[i].flight_id%></td>
+    <td><%=data[i].from_city%></td>
+    <td><%=data[i].to_city%></td>
+    
+    <td><%=data[i].depart%></td>
+    <td><%=data[i].arrive%></td>
+    <td>
+        
+        <form method="get" action="/flight" id="theForm"+i name="theForm"+i novalidate>
+        <input class="form-control" id="flight" name="flight" value=<%=data[i].flight_id%> type="hidden" name = "flight"/> 
+            <script>console.log(<%=data[i].flight_id%>)</script>
+       <button type="submit" class="btn btn-primary" >Select</button>
+        </form> </td>
+    
+      
+   
+      
+  </tr>
+       
+  <% }
+  }else{ %>
+  <tr>
+    <td colspan="3">No user</td>
+  </tr>
+<% } %>
+</table>
+    
+  </body>
+</html>

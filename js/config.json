@@ -1,0 +1,10 @@
+{
+  "domain":"htt://www.miguelrosendo.com/html/rqmr",
+  "rqmr_booking":{	
+	"host": "p3plcpnl0974.prod.phx3.secureserver.net",
+  	"user": "miguel1984",
+  	"password": "Union.Dutchmen.17",
+  	"database": "rqmr_booking",
+  	"port": 3306
+  }
+}

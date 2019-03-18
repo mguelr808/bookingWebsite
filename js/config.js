@@ -1,0 +1,7 @@
+db_host: "p3plcpnl0974.prod.phx3.secureserver.net"
+db_user: "miguel1984"
+db_password: "Union.Dutchmen.17"
+db_database: "rqmr_booking"
+db_port: 3306,
+
+

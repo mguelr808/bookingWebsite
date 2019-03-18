@@ -21,7 +21,7 @@
     <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
     <link rel="stylesheet" href="../../css/final.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+    <script data-main="scripts/main" src="../../js/index.js"></script>
      
     
     </head>
@@ -202,15 +202,15 @@
    var msg = "";
     $('#submit').on('click',function() {
         msg+= "?"
-        msg+= "toCity" + "="+ $('#toCity').val() + "?";
-        msg+= "fromCity" + "="+ $('#fromCity').val()+ "?";
-        msg+= "children" + "="+ $('#children').val()+ "?";
-        msg+= "depart" + "="+ $('#date').val()+ "?";
-        msg+= "arrive" + "="+ $('#date2').val()+ "?";
-        msg+= "class" + "="+ $('#class').val()+ "?";
-        msg+= "tripType" + "="+ $('#tripType').val()+ "?";
+        msg+= "toCity" + "="+ $('#toCity').val() + "&";
+        msg+= "fromCity" + "="+ $('#fromCity').val()+ "&";
+        msg+= "children" + "="+ $('#children').val()+ "&";
+        msg+= "depart" + "="+ $('#date').val()+ "&";
+        msg+= "arrive" + "="+ $('#date2').val()+ "&";
+        msg+= "class" + "="+ $('#class').val()+ "&";
+        msg+= "tripType" + "="+ $('#tripType').val();
        
-        window.location.href = "select.html" + msg;
+        //window.location.href = "select.html" + msg;
 
   
 });

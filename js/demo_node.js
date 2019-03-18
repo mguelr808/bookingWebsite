@@ -1,19 +1,29 @@
-// demo_node.js
-var mysql = require('mysql');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+// parse html forms
+app.use(bodyParser.urlencoded({ extended : true}));
+// set ejs as rendering engine
+app.set('view engine', 'ejs');
+app.use("/views", express.static('./views/'));
 
-var con = mysql.createConnection({
-  host: "p3plcpnl0974.prod.phx3.secureserver.net",
-  user: "miguel1984",
-  password: "Union.Dutchmen.17",
-  database: "rqmr_booking",
-  port: 3306,
+
+
+
+// render the ejs page
+app.get('/submit', function (req, res) {
+  res.render('submit.ejs');
 });
 
-con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM flight WHERE (from_city = 'NYC' AND to_City = 'MIA')", function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-  });
+
+
+// when Add to Bottom button is clicked
+app.post("/submit", function (req, res) {
+    console.log(" is added to top of the list.");
+ 
+  
 });
 
+app.listen(8000);
+console.log('App is listening on PORT 8000');
